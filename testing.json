@@ -2,7 +2,7 @@
   "swagger": "2.0",
   "info": {
     "version": "2021-08-30T03:54:00Z",
-    "title": "newtest"
+    "title": "newtest11"
   },
   "host": "owdkuaxup2.execute-api.ap-south-1.amazonaws.com",
   "basePath": "/test",
