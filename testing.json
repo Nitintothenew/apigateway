@@ -4,7 +4,7 @@
     "version": "2021-08-30T03:54:00Z",
     "title": "myapi"
   },
-  "host": "kctpz39z16.execute-api.ap-south-1.amazonaws.com",
+  "host": "owdkuaxup2.execute-api.ap-south-1.amazonaws.com",
   "basePath": "/test",
   "schemes": [
     "https"
