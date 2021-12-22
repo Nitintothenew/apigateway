@@ -1,0 +1,134 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "version": "2021-08-30T03:54:00Z",
+    "title": "testingnewww"
+  },
+  "host": "5cgnxk599f.execute-api.ap-south-1.amazonaws.com",
+  "basePath": "/test",
+  "schemes": [
+    "https"
+  ],
+  "paths": {
+    "/policyapi": {
+      "post": {
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "200 response",
+            "schema": {
+              "$ref": "#/definitions/Empty"
+            },
+            "headers": {
+              "X-Frame-Options": {
+                "type": "string"
+              },
+              "Strict-Transport-Security": {
+                "type": "string"
+              },
+              "X-Content-Type-Options": {
+                "type": "string"
+              },
+              "X-XSS-Protection": {
+                "type": "string"
+              }
+            }
+          },
+          "400": {
+            "description": "400 response",
+            "schema": {
+              "$ref": "#/definitions/Empty"
+            },
+            "headers": {
+              "X-Frame-Options": {
+                "type": "string"
+              },
+              "Strict-Transport-Security": {
+                "type": "string"
+              },
+              "X-Content-Type-Options": {
+                "type": "string"
+              },
+              "X-XSS-Protection": {
+                "type": "string"
+              }
+            }
+          },
+          "500": {
+            "description": "500 response",
+            "schema": {
+              "$ref": "#/definitions/Empty"
+            },
+            "headers": {
+              "X-Frame-Options": {
+                "type": "string"
+              },
+              "Strict-Transport-Security": {
+                "type": "string"
+              },
+              "X-Content-Type-Options": {
+                "type": "string"
+              },
+              "X-XSS-Protection": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        "x-amazon-apigateway-integration": {
+          "httpMethod": "POST",
+          "uri": "arn:aws:apigateway:ap-south-1:lambda:path/2015-03-31/functions/arn:aws:lambda:ap-south-1:779778567063:function:bhartiaxa-prd-edl-policy-api/invocations",
+          "responses": {
+            "default": {
+              "statusCode": "200",
+              "responseParameters": {
+                "method.response.header.X-Frame-Options": "integration.response.body.headers.X-Frame-Options",
+                "method.response.header.Strict-Transport-Security": "integration.response.body.headers.Strict-Transport-Security",
+                "method.response.header.X-XSS-Protection": "integration.response.body.headers.X-XSS-Protection",
+                "method.response.header.X-Content-Type-Options": "integration.response.body.headers.X-Content-Type-Options"
+              },
+              "responseTemplates": {
+                "application/json": "$input.json('body')"
+              }
+            },
+            "DEFAULT_5XX": {
+              "statusCode": "500",
+              "responseParameters": {
+                "method.response.header.X-Frame-Options": "integration.response.header.X-Frame-Options",
+                "method.response.header.X-XSS-Protection": "integration.response.body.headers.X-XSS-Protection",
+                "method.response.header.Strict-Transport-Security": "integration.response.body.headers.Strict-Transport-Security",
+                "method.response.header.X-Content-Type-Options": "integration.response.body.headers.X-Content-Type-Options"
+              },
+              "responseTemplates": {
+                "application/json": "$input.json('body')"
+              }
+            },
+            "DEFAULT_4XX": {
+              "statusCode": "400",
+              "responseParameters": {
+                "method.response.header.X-Frame-Options": "integration.response.header.X-Frame-Options",
+                "method.response.header.Strict-Transport-Security": "integration.response.body.headers.Strict-Transport-Security",
+                "method.response.header.X-XSS-Protection": "integration.response.body.headers.X-XSS-Protection",
+                "method.response.header.X-Content-Type-Options": "integration.response.body.headers.X-Content-Type-Options"
+              },
+              "responseTemplates": {
+                "application/json": "$input.json('body')"
+              }
+            }
+          },
+          "passthroughBehavior": "when_no_match",
+          "contentHandling": "CONVERT_TO_TEXT",
+          "type": "aws"
+        }
+      }
+    }
+  },
+  "definitions": {
+    "Empty": {
+      "type": "object",
+      "title": "Empty Schema"
+    }
+  }
+}
